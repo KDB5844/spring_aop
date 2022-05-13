@@ -1,6 +1,7 @@
 package hello.aop.pointcut;
 
 import hello.aop.member.MemberService;
+import hello.aop.member.MemberServiceImpl;
 import hello.aop.member.annotation.ClassAop;
 import hello.aop.member.annotation.MethodAop;
 import lombok.extern.slf4j.Slf4j;
@@ -14,6 +15,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
+
+import java.lang.reflect.Proxy;
 
 @Slf4j
 @Import({ParameterTest.parameterAspect.class})
